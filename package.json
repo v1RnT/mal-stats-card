@@ -6,7 +6,7 @@
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "next lint --dir .",
+    "lint": "eslint src",
     "test": "vitest",
     "prepare": "husky install",
     "type-check": "tsc --noEmit"
