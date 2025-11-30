@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
-    "type-check": "tsc --noEmit",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint", 
+    "test": "vitest",
+    "prepare": "husky install",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@vercel/og": "^0.8.5",
