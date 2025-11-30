@@ -1,7 +1,7 @@
 # MyAnimeList Stats Card
 
 <div align="center">
-  <p><strong>Showcase your anime and manga progress with a dynamic, serverless SVG card.</strong></p>
+  <p><strong>Showcase your anime and manga progress with a dynamic, serverless stats card.</strong></p>
 
   <img src="https://mal-stats-card.vercel.app/api/card?user=fknalive&theme=dark" alt="MAL Stats Example" />
   <img src="https://mal-stats-card.vercel.app/api/card?user=fknalive&theme=dark&layout=mini&type=manga" alt="MAL Stats Example" />
