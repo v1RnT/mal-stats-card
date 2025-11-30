@@ -1,4 +1,4 @@
-import { LayoutType } from "../types/LayoutType";
+import { LayoutType } from "../enums/LayoutType";
 
 export const LAYOUT_CONFIG: Record<
   LayoutType,
