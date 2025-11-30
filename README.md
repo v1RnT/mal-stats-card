@@ -12,10 +12,11 @@
 
 ## Features
 
-* **Zero Configuration:** Simply append your username to the URL: `?user=your_nickname`.
-* **Adaptive Themes:** Seamlessly matches your aesthetic. Use `&theme=light` or `dark`.
-* **Versatile Layouts:** Fits any space. Choose from detailed (`full`), widget-sized (`mini`), or footer-style (`line`).
-* **Dual Support:** Tracks both Anime and Manga stats. Just add `&type=manga`.
+* **Easy to start:** Simply append ur username from MAL to the URL: `?user=your_nickname`.
+* **Themes:** Use `&theme=light` or `dark`.
+* **Layouts:** Choose from detailed, widget-sized, or shorten-styled. With `&layout=full`, `mini` or `line`.
+* **Manga Stats:** To see your Manga stats, just add `&type=manga`.
+* **Customize size:** Set `width` size and `height` size to your liking. Use `&width={number}` or/and `&height={number}`
 * **Live Data:** Powered by the [Jikan API](https://jikan.moe/) for up-to-date statistics.
 
 ---
