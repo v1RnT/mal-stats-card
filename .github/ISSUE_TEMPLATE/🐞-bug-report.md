@@ -1,18 +1,10 @@
 ---
-name: Bug report
+name: "\U0001F41E Bug Report"
 about: Report a bug or issue
-title: ''
+title: Bug
 labels: ''
 assignees: v1RnT
 
----
-
----
-name: "🐞 Bug Report"
-about: Report a bug or issue
-title: "[Bug] "
-labels: ["bug"]
-assignees: ""
 ---
 
 ## Description

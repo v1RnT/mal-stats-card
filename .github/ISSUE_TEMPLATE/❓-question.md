@@ -1,18 +1,10 @@
 ---
 name: "❓ Question"
 about: Ask a question about the project
-title: ''
+title: Question
 labels: ''
-assignees: ''
+assignees: v1RnT
 
----
-
----
-name: "❓ Question"
-about: Ask a question about the project
-title: "[Question] "
-labels: ["question"]
-assignees: ""
 ---
 
 ## Question

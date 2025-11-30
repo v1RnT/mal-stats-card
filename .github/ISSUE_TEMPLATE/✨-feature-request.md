@@ -1,18 +1,10 @@
 ---
-name: Feature Request
+name: "✨ Feature Request"
 about: Suggest an idea or improvement for this project
-title: ''
+title: Feature
 labels: ''
 assignees: v1RnT
 
----
-
----
-name: "✨ Feature Request"
-about: Suggest an idea or improvement for this project
-title: "[Feature] "
-labels: ["enhancement"]
-assignees: ""
 ---
 
 ## Summary
