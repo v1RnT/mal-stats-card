@@ -10,6 +10,10 @@
 
 </div>
 
+<p align="center">
+  <strong>You can customize your Card settings in our constructor: <a href="https://mal-stats-card.vercel.app/">Link</a>.</strong>
+</p>
+
 ## Features
 
 * **Easy to start:** Simply append ur username from MAL to the URL: `?user=your_nickname`.
@@ -20,6 +24,9 @@
 * **Live Data:** Powered by the [Jikan API](https://jikan.moe/) for up-to-date statistics.
 
 ---
+
+## MAL Stats Card Constructor
+
 
 ## Params Table
 
