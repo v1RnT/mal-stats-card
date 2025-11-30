@@ -1,4 +1,4 @@
-# 📊 MyAnimeList Stats Card
+# MyAnimeList Stats Card
 
 <div align="center">
   <p><strong>Showcase your anime and manga progress with a dynamic, serverless SVG card.</strong></p>
@@ -10,7 +10,7 @@
 
 </div>
 
-## ✨ Features
+## Features
 
 * **Zero Configuration:** Simply append your username to the URL: `?user=your_nickname`.
 * **Adaptive Themes:** Seamlessly matches your aesthetic. Use `&theme=light` or `dark`.
