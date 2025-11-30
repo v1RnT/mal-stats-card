@@ -2,20 +2,31 @@ import { NextRequest, NextResponse } from "next/server";
 import satori from "satori";
 import { fetchUserStats } from "@/src/api/api";
 import { StatsCard } from "@/src/components/StatsCard";
-import { LayoutType } from "@/src/types/LayoutType";
 import { LAYOUT_CONFIG } from "@/src/lib/layout-config";
+import { MediaType } from "@/src/enums/MediaType";
+import { ThemeType } from "@/src/enums/ThemeType";
+import { LayoutType } from "@/src/enums/LayoutType";
 
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
 
     const username = searchParams.get("user");
-    const type = searchParams.get("type") === "manga" ? "manga" : "anime";
-    const theme = searchParams.get("theme") === "light" ? "light" : "dark";
 
-    const rawLayout = searchParams.get("layout");
-    const layout: LayoutType =
-      rawLayout === "mini" || rawLayout === "line" ? rawLayout : "full";
+    const typeParam = searchParams.get("type") as MediaType;
+    const type = Object.values(MediaType).includes(typeParam)
+      ? typeParam
+      : MediaType.Anime;
+
+    const themeParam = searchParams.get("theme") as ThemeType;
+    const theme = Object.values(ThemeType).includes(themeParam)
+      ? themeParam
+      : ThemeType.Dark;
+
+    const layoutParam = searchParams.get("layout") as LayoutType;
+    const layout = Object.values(LayoutType).includes(layoutParam)
+      ? layoutParam
+      : LayoutType.Full;
 
     const config = LAYOUT_CONFIG[layout];
 
@@ -32,10 +43,7 @@ export async function GET(request: NextRequest) {
     if (!username) {
       return new NextResponse(
         JSON.stringify({ error: 'Missing "user" parameter' }),
-        {
-          status: 400,
-          headers: { "Content-Type": "application/json" },
-        }
+        { status: 400, headers: { "Content-Type": "application/json" } }
       );
     }
 

@@ -1,12 +1,12 @@
 import React from "react";
 import { THEMES } from "../lib/themes";
-import { ThemeType } from "../types/ThemeType";
-import { LayoutType } from "../types/LayoutType";
 import { SIZES } from "../lib/sizes";
+import { ThemeType } from "../enums/ThemeType";
+import { LayoutType } from "../enums/LayoutType";
 
 export const getStyles = (
-  themeName: ThemeType = "dark",
-  layout: LayoutType = "full"
+  themeName: ThemeType = ThemeType.Dark,
+  layout: LayoutType = LayoutType.Full
 ) => {
   const theme = THEMES[themeName] || THEMES.dark;
   const size = SIZES[layout] || SIZES.full;
@@ -29,8 +29,9 @@ export const getStyles = (
       color: theme.text,
       fontFamily: "Verdana, sans-serif",
       padding: `${size.padding}px`,
-      border: themeName === "light" ? `1px solid ${theme.border}` : "none",
-      justifyContent: layout === "line" ? "center" : "flex-start",
+      border:
+        themeName === ThemeType.Light ? `1px solid ${theme.border}` : "none",
+      justifyContent: layout === LayoutType.Line ? "center" : "flex-start",
     } as React.CSSProperties,
 
     row: flexRow,

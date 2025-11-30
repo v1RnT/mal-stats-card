@@ -1,6 +1,6 @@
-import { LayoutType } from "./LayoutType";
-import { MediaType } from "./MediaType";
-import { ThemeType } from "./ThemeType";
+import { LayoutType } from "../enums/LayoutType";
+import { MediaType } from "../enums/MediaType";
+import { ThemeType } from "../enums/ThemeType";
 import { UserStats } from "./UserStats";
 
 export interface StatsCardProps {

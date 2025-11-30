@@ -1,8 +1,12 @@
 import MalLogo from "../assets/icons/mal-icon.svg";
+import { getStyles } from "./StatsCard.styles";
+
 import { STATUS_COLORS } from "../lib/status-colors";
 import { ListItemProps } from "../types/ListItemProps";
 import { StatsCardProps } from "../types/StatsCardProps";
-import { getStyles } from "./StatsCard.styles";
+import { LayoutType } from "../enums/LayoutType";
+import { MediaType } from "../enums/MediaType";
+import { ThemeType } from "../enums/ThemeType";
 
 const ListItem = ({ color, text, count, styles }: ListItemProps) => (
   <div style={styles.container}>
@@ -15,23 +19,24 @@ const ListItem = ({ color, text, count, styles }: ListItemProps) => (
 export const StatsCard = ({
   type,
   stats,
-  theme = "dark",
-  layout = "full",
+  theme = ThemeType.Dark,
+  layout = LayoutType.Full,
 }: StatsCardProps) => {
-  const isAnime = type === "anime";
+  const isAnime = type === MediaType.Anime;
   const s = getStyles(theme, layout);
 
   const activeCount = isAnime ? stats.watching : stats.reading;
   const plannedCount = isAnime ? stats.plan_to_watch : stats.plan_to_read;
 
-  const iconSize = layout === "full" ? 18 : 12;
+  const iconSize = layout === LayoutType.Full ? 18 : 12;
 
   return (
     <div style={s.wrapper}>
       <div
         style={{
           ...s.rowBetween,
-          marginBottom: layout === "line" ? 4 : s.rowBetween.marginBottom || 8,
+          marginBottom:
+            layout === LayoutType.Line ? 4 : s.rowBetween.marginBottom || 8,
         }}
       >
         <div style={s.logoGroup}>
@@ -43,7 +48,12 @@ export const StatsCard = ({
         <span style={s.subText}>{stats.username}</span>
       </div>
 
-      <div style={{ ...s.rowBetween, marginBottom: layout === "line" ? 4 : 8 }}>
+      <div
+        style={{
+          ...s.rowBetween,
+          marginBottom: layout === LayoutType.Line ? 4 : 8,
+        }}
+      >
         <div style={s.row}>
           <span style={s.label}>Days: </span>
           <span style={s.value}>
@@ -54,7 +64,7 @@ export const StatsCard = ({
           <span style={s.label}>Score: </span>
           <span style={s.value}>{stats.mean_score}</span>
         </div>
-        {(layout === "mini" || layout === "line") && (
+        {(layout === LayoutType.Mini || layout === LayoutType.Line) && (
           <div style={s.row}>
             <span style={s.label}>Total: </span>
             <span style={s.value}>{stats.total_entries}</span>
@@ -63,7 +73,10 @@ export const StatsCard = ({
       </div>
 
       <div
-        style={{ ...s.graphContainer, marginBottom: layout === "line" ? 0 : 8 }}
+        style={{
+          ...s.graphContainer,
+          marginBottom: layout === LayoutType.Line ? 0 : 8,
+        }}
       >
         {activeCount > 0 && (
           <div
@@ -117,13 +130,13 @@ export const StatsCard = ({
         )}
       </div>
 
-      {layout !== "line" && (
+      {layout !== LayoutType.Line && (
         <div style={s.rowBetween}>
           <div style={{ ...s.col, width: "48%" }}>
             <ListItem
               styles={s.listItem}
               color={STATUS_COLORS.watching}
-              count={isAnime ? stats.watching : stats.reading}
+              count={activeCount}
               text={isAnime ? "Watching" : "Reading"}
             />
             <ListItem
@@ -147,13 +160,13 @@ export const StatsCard = ({
             <ListItem
               styles={s.listItem}
               color={STATUS_COLORS.plan_to_watch}
-              count={isAnime ? stats.plan_to_watch : stats.plan_to_read}
+              count={plannedCount}
               text={isAnime ? "Plan to Watch" : "Plan to Read"}
             />
           </div>
 
           <div style={{ ...s.col, width: "45%" }}>
-            {layout === "full" && (
+            {layout === LayoutType.Full && (
               <div style={{ ...s.rowBetween, marginBottom: 4 }}>
                 <span style={s.label}>Total Entries</span>
                 <span style={s.value}>{stats.total_entries}</span>
