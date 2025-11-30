@@ -25,9 +25,6 @@
 
 ---
 
-## MAL Stats Card Constructor
-
-
 ## Params Table
 
 <div align="center">
@@ -60,4 +57,4 @@ https://mal-stats-card.vercel.app/api/card?user=YOUR_USERNAME&type=manga
 
 ##
 
-<p align="center">✨ <em>For any suggestions or questions write in the Issues tab of this Repository</em> ✨</p>
+<p align="center"><em>For any suggestions or questions write in the Issues tab of this Repository</em></p>
