@@ -41,13 +41,13 @@ Copy and paste the following markdown into your profile (e.g., GitHub README). R
 
 ### 1. The Standard Anime Card URL
 ```markdown
-![My Anime Stats](https://mal-stats-card.vercel.app/api/card?user=YOUR_USERNAME)
+https://mal-stats-card.vercel.app/api/card?user=YOUR_USERNAME
 ```
 
 ### 2. The Standard Manga Card URL
 
 ```markdown
-![My Manga Stats](https://mal-stats-card.vercel.app/api/card?user=YOUR_USERNAME&type=manga)
+https://mal-stats-card.vercel.app/api/card?user=YOUR_USERNAME&type=manga
 ```
 
 ##
